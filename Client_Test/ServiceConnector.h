@@ -18,6 +18,6 @@
 @property (strong,nonatomic) id <ServiceConnectorDelegate> delegate;
 
 -(void)getTest;
--(void)postTest;
+-(void)postTest:(NSString *) account and:(NSString *) password go:(NSString *)url;
 
 @end

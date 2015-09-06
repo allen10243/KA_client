@@ -16,32 +16,35 @@
 
 -(void)getTest{
     
-    //build up the request that is to be sent to the server
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://localhost/~allenhhsu/test123.php"]];
-    
-    [request setHTTPMethod:@"GET"];
-    [request addValue:@"getValues" forHTTPHeaderField:@"METHOD"]; //selects what task the server will perform
-    
-    //initialize an NSURLConnection  with the request
-    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-    if(!connection){
-        NSLog(@"Connection Failed");
-    }
+//    //build up the request that is to be sent to the server
+//    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://192.168.1.104/test.php"]];
+//    
+//    [request setHTTPMethod:@"GET"];
+//    [request addValue:@"getValues" forHTTPHeaderField:@"METHOD"]; //selects what task the server will perform
+//    
+//    //initialize an NSURLConnection  with the request
+//    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+//    if(!connection){
+//        NSLog(@"Connection Failed");
+//    }
     
 }
 
--(void)postTest{
+-(void)postTest:(NSString *) account and:(NSString *) password go:(NSString *)url{
     
     //build up the request that is to be sent to the server
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://localhost/~allenhsu/test123.php"]];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
+ //   NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://localhost/~allenhsu/test123.php"]];
+
     
     [request setHTTPMethod:@"POST"];
+
     [request addValue:@"postValues" forHTTPHeaderField:@"METHOD"];
    
     //create data that will be sent in the post
     NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
-    [dictionary setValue:@2 forKey:@"value1"];
-    [dictionary setValue:@"This was sent from ios to server" forKey:@"value2"];
+    [dictionary setValue:account forKey:@"account"];
+    [dictionary setValue:password forKey:@"password"];
     
     //serialize the dictionary data as json
     NSData *data = [[dictionary copy] JSONValue];
@@ -50,6 +53,7 @@
     [request addValue:[NSString stringWithFormat:@"%d",data.length] forHTTPHeaderField:@"Content-Length"];
     
     NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    
     if(!connection){
         NSLog(@"Connection Failed");
     }
@@ -62,7 +66,10 @@
 -(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data{ // executed when the connection receives data
     
     receivedData = data;
-    /* NOTE: if you are working with large data , it may be better to set recievedData as NSMutableData 
+   // NSLog(@"receive!!!!!");
+   // NSLog(@"%@",data);
+
+    /* NOTE: if you are working with large data , it may be better to set recievedData as NSMutableData
              and use  [receivedData append:Data] here, in this event you should also set recievedData to nil
              when you are done working with it or any new data received could end up just appending to the 
              last message received*/
@@ -80,7 +87,7 @@
 
 -(void)connectionDidFinishLoading:(NSURLConnection *)connection{
     
-    NSLog(@"Request Complete,recieved %d bytes of data",receivedData.length);
+  //  NSLog(@"Request Complete,recieved %d bytes of data",receivedData.length);
     
     [self.delegate requestReturnedData:receivedData];//send the data to the delegate
 }

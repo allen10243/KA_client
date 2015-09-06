@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B5299B931B9811620051623C /* ACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5299B921B9811620051623C /* ACViewController.m */; };
+		B5BB7B8A1B7CE15600D9B80F /* NUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BB7B891B7CE15600D9B80F /* NUViewController.m */; };
 		B5D190741B745CA1003BEEE7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D190731B745CA1003BEEE7 /* main.m */; };
 		B5D190771B745CA1003BEEE7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D190761B745CA1003BEEE7 /* AppDelegate.m */; };
 		B5D1907A1B745CA1003BEEE7 /* Client_Test.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5D190781B745CA1003BEEE7 /* Client_Test.xcdatamodeld */; };
@@ -15,6 +17,7 @@
 		B5D190821B745CA1003BEEE7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5D190811B745CA1003BEEE7 /* Images.xcassets */; };
 		B5D190851B745CA1003BEEE7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5D190831B745CA1003BEEE7 /* LaunchScreen.xib */; };
 		B5D190911B745CA2003BEEE7 /* Client_TestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D190901B745CA2003BEEE7 /* Client_TestTests.m */; };
+		B5D1909C1B745E7B003BEEE7 /* ServiceConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D1909B1B745E7B003BEEE7 /* ServiceConnector.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +31,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B5299B911B9811400051623C /* ACViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACViewController.h; sourceTree = "<group>"; };
+		B5299B921B9811620051623C /* ACViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACViewController.m; sourceTree = "<group>"; };
+		B5BB7B881B7CE12900D9B80F /* NUViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NUViewController.h; sourceTree = "<group>"; };
+		B5BB7B891B7CE15600D9B80F /* NUViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUViewController.m; sourceTree = "<group>"; };
 		B5D1906E1B745CA1003BEEE7 /* Client_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Client_Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5D190721B745CA1003BEEE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5D190731B745CA1003BEEE7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -42,6 +49,9 @@
 		B5D1908A1B745CA2003BEEE7 /* Client_TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Client_TestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5D1908F1B745CA2003BEEE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5D190901B745CA2003BEEE7 /* Client_TestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Client_TestTests.m; sourceTree = "<group>"; };
+		B5D1909A1B745E5F003BEEE7 /* JSONDictionaryExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSONDictionaryExtensions.h; sourceTree = "<group>"; };
+		B5D1909B1B745E7B003BEEE7 /* ServiceConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceConnector.m; sourceTree = "<group>"; };
+		B5D1909E1B745F2D003BEEE7 /* ServiceConnector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceConnector.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,10 +93,17 @@
 		B5D190701B745CA1003BEEE7 /* Client_Test */ = {
 			isa = PBXGroup;
 			children = (
+				B5D1909A1B745E5F003BEEE7 /* JSONDictionaryExtensions.h */,
+				B5D1909E1B745F2D003BEEE7 /* ServiceConnector.h */,
+				B5D1909B1B745E7B003BEEE7 /* ServiceConnector.m */,
 				B5D190751B745CA1003BEEE7 /* AppDelegate.h */,
 				B5D190761B745CA1003BEEE7 /* AppDelegate.m */,
 				B5D1907B1B745CA1003BEEE7 /* ViewController.h */,
 				B5D1907C1B745CA1003BEEE7 /* ViewController.m */,
+				B5BB7B881B7CE12900D9B80F /* NUViewController.h */,
+				B5BB7B891B7CE15600D9B80F /* NUViewController.m */,
+				B5299B911B9811400051623C /* ACViewController.h */,
+				B5299B921B9811620051623C /* ACViewController.m */,
 				B5D1907E1B745CA1003BEEE7 /* Main.storyboard */,
 				B5D190811B745CA1003BEEE7 /* Images.xcassets */,
 				B5D190831B745CA1003BEEE7 /* LaunchScreen.xib */,
@@ -222,8 +239,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5D1909C1B745E7B003BEEE7 /* ServiceConnector.m in Sources */,
 				B5D1907A1B745CA1003BEEE7 /* Client_Test.xcdatamodeld in Sources */,
+				B5299B931B9811620051623C /* ACViewController.m in Sources */,
 				B5D190771B745CA1003BEEE7 /* AppDelegate.m in Sources */,
+				B5BB7B8A1B7CE15600D9B80F /* NUViewController.m in Sources */,
 				B5D1907D1B745CA1003BEEE7 /* ViewController.m in Sources */,
 				B5D190741B745CA1003BEEE7 /* main.m in Sources */,
 			);
@@ -420,6 +440,7 @@
 				B5D190961B745CA2003BEEE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B5D190971B745CA2003BEEE7 /* Build configuration list for PBXNativeTarget "Client_TestTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +449,7 @@
 				B5D190991B745CA2003BEEE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

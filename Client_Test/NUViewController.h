@@ -6,8 +6,16 @@
 //  Copyright (c) 2015年 Asurada. All rights reserved.
 //
 
-#ifndef Client_Test_NUViewController_h
-#define Client_Test_NUViewController_h
 
+#import <UIKit/UIKit.h>
 
-#endif
+@interface NUViewController : UIViewController
+
+//@property (strong, nonatomic) IBOutlet UITextField *account_TF;
+//@property (strong, nonatomic) IBOutlet UITextField *password_TF;
+@property (strong, nonatomic) IBOutlet UITextField *NU_TF1;
+@property (strong, nonatomic) IBOutlet UITextField *NU_TF2;
+@property (strong, nonatomic) IBOutlet UITextField *NU_TF3;
+
+@end
+

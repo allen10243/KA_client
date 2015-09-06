@@ -10,6 +10,8 @@
 
 @interface ViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UITextField *account_TF;
+@property (strong, nonatomic) IBOutlet UITextField *password_TF;
 
 @end
 
